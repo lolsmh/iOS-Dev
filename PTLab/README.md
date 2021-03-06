@@ -11,7 +11,7 @@
 - К задаче можно прикрепить фото, ссылки, поставить напоминания, заблокировать их паролем
 - Интеграция с Face ID на заблокированных заметках
 
-![New Item Gif](https://github.com/lolsmh/iOS-Dev/blob/master/gifs/PTLab/newItem.gif)
+![New Task Gif](https://github.com/lolsmh/iOS-Dev/blob/master/gifs/PTLab/newTask.gif)
 
 **UI/UX**
 - Адаптация к темной и светлой теме
