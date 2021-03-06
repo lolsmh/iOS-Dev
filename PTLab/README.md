@@ -2,7 +2,7 @@
 
 Мобильное приложение для составление списков задач на SwiftUI (MVVM)
 
-![New List Gif](https://github.com/lolsmh/iOS-Dev/blob/master/gifs/PTLab/newList.gif)
+![New List Gif](https://github.com/lolsmh/iOS-Dev/blob/master/gifs/PTLab/newList.gif =50x)
 
 **Функционал**
 - При создании списков можно кастомизировать иконки, названия, цвет шрифта и фона, и даже поставить фотографию на фон
