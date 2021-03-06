@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BSImagePicker",
+        "repositoryURL": "https://github.com/mikaoj/BSImagePicker",
+        "state": {
+          "branch": null,
+          "revision": "750f26abd0fafbcc4124adef436251888a7c962a",
+          "version": "3.3.1"
+        }
+      },
+      {
+        "package": "SwiftlySearch",
+        "repositoryURL": "https://github.com/thislooksfun/SwiftlySearch",
+        "state": {
+          "branch": null,
+          "revision": "7741806e979e59e9583962da43d09ec92f598026",
+          "version": "1.2.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

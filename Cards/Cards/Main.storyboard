@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Theme Chooser View Controller-->
+        <scene sceneID="yLg-5G-pFl">
+            <objects>
+                <viewController id="B3Q-zM-wgw" customClass="ThemeChooserViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GgI-Mp-c8F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JVR-pa-Lim">
+                                <rect key="frame" x="152" y="377" width="110" height="196"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-ny-sVV">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Yellow"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="B3Q-zM-wgw" eventType="touchUpInside" id="WB1-SW-tdM"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Choose Theme" id="8Z3-ww-Wdt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMl-zU-D5c">
+                                        <rect key="frame" x="17" y="68" width="76" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="B3Q-zM-wgw" eventType="touchUpInside" id="iSE-TR-8xi"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Choose Theme" id="gbG-CF-dMq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-DY-sja">
+                                        <rect key="frame" x="21" y="136" width="68" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="B3Q-zM-wgw" eventType="touchUpInside" id="fVd-u1-hRh"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="Choose Theme" id="Y7Q-kv-TUr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Auy-Iv-idf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JVR-pa-Lim" firstAttribute="centerY" secondItem="Auy-Iv-idf" secondAttribute="centerY" id="2PH-ht-w7t"/>
+                            <constraint firstItem="JVR-pa-Lim" firstAttribute="centerX" secondItem="Auy-Iv-idf" secondAttribute="centerX" id="4Ca-OQ-y83"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pNq-Zr-flL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyd-sd-9AF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2339" y="319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHD-bt-XAS" customClass="PlayingCardView" customModule="Cards" customModuleProvider="target">
+                                <rect key="frame" x="20" y="122" width="374" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oHD-bt-XAS" secondAttribute="height" multiplier="5:8" id="E7b-bi-VdA"/>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="mvF-Pj-Xh8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3IL-37-UeR" appends="YES" id="aqR-wv-Y31"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.86987487896719173" blue="0.32041312179130277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oHD-bt-XAS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4ht-a4-P1a"/>
+                            <constraint firstItem="oHD-bt-XAS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9m2-7t-FEf"/>
+                            <constraint firstItem="oHD-bt-XAS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9vr-Gl-9jp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oHD-bt-XAS" secondAttribute="bottom" constant="20" id="V2d-fI-xKA"/>
+                            <constraint firstItem="oHD-bt-XAS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vau-8G-UGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oHD-bt-XAS" secondAttribute="trailing" constant="20" id="cCs-Hj-0eC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZT-ZI-r47"/>
+                    <connections>
+                        <outlet property="playingCardView" destination="oHD-bt-XAS" id="6SE-f0-msq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3IL-37-UeR">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="Uv6-9F-cBd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1162.3188405797102" y="246.42857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qQT-gJ-0Ca">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xBM-aI-Nal" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="swZ-dK-OTB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B3Q-zM-wgw" kind="relationship" relationship="rootViewController" id="uXE-bS-ow9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jW1-Gt-Aw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3242" y="269"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y7Q-kv-TUr"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
